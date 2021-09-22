@@ -45,8 +45,18 @@ const HomePage = () => {
 function editTask() {
   const newList = list.map((task, i) => {
     if (i !== index) return task;
+    return {
+      //toggle form for edits ******
+
+      name: `Edit ${task.name}`, 
+      color: task.color,
+    }
   })
   setList(newList)
+}
+
+function deleteTask() {
+  // Array.filter
 }
 
 const taskList = list.map((task, index) => {
